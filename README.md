@@ -3,25 +3,14 @@
 Phoenix "Web Tabs"-Komponente auf Mithril-Basis.
 
 ```js
-// CommonJS
-const Tabs = require('@phoenixreisen/tabs');
+const TabView = require('@phoenixreisen/tabs');
+// oder
+import TabView from '@phoenixreisen/tabs';
 
-// ES6
-import Tabs from '@phoenixreisen/tabs';
-
-// Hyperscript
-m(Tabs, 
+m(TabView, 
     { tabs: ['Tab 1', 'Tab 2'] }, 
     [ m('div.tab1'), m('div.tab2') ]
 );
-
-// JSX
-<Tabs tabs={['Tab 1', 'Tab 2']}>
-    {[
-        <div class="tab1">Tab 1</div>,
-        <div class="tab2">Tab 2</div>,
-    ]}
-</Tabs>
 ```
 
 ## Installation

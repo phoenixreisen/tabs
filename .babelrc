@@ -1,0 +1,18 @@
+{
+    "presets": ["babel-preset-env"],
+    "plugins": [
+        [
+            "file-loader",
+            {
+                "name": "[hash].[ext]",
+                "extensions": ["png", "jpg", "jpeg", "gif", "svg"],
+                "publicPath": "/test",
+                "outputPath": "/test",
+                "context": ""
+            }
+        ],
+        ["transform-react-jsx", {
+            "pragma": "m"
+        }]
+    ]
+}

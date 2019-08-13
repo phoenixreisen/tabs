@@ -1,0 +1,41 @@
+{
+  "name": "@phoenixreisen/tabs",
+  "version": "1.1.4",
+  "description": "Tab-Komponente, um Content durch Tabs zu strukturieren.",
+  "homepage": "https://www.phoenixreisen.com",
+  "main": "src/phx.tabs.view.js",
+  "scripts": {
+    "prepublish": "babel src --out-dir dist",
+    "pretest": "babel src --out-dir test",
+    "test": "ospec --require ./test-setup.js",
+    "posttest": "del-cli test"
+  },
+  "author": "Phoenix Reisen <it@phoenixreisen.com>",
+  "contributors": [
+    "Phoenix Reisen <it@phoenixreisen.com>",
+    "Fabian Marcus <f.marcus@phoenixreisen.com>",
+    "Jan Hermanns <j.hermanns@phoenixreisen.com>",
+    "Leon Schmitz <l.schmitz@phoenixreisen.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phoenixreisen/tabs.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "mithril": "^2.0.3"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-file-loader": "^1.1.1",
+    "babel-plugin-inline-svg": "^1.0.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "del-cli": "^2.0.0",
+    "jsdom": "^15.1.1",
+    "mithril-node-render": "^2.3.2",
+    "mithril-query": "^3.0.1",
+    "ospec": "^4.0.0"
+  }
+}

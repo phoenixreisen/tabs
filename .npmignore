@@ -1,0 +1,11 @@
+.gitignore
+.hgignore
+.babelrc
+README.md
+package-lock.json
+
+.hg/
+.git/
+test/
+tests/
+node_modules/

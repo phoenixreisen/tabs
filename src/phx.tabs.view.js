@@ -54,6 +54,6 @@ const TabView = {
     },
 };
 
-if(module) {
+if(typeof module !== 'undefined') {
     module.exports = TabView;
 }

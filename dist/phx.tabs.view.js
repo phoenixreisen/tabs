@@ -64,6 +64,4 @@ var TabView = {
     }
 };
 
-if(module) {
-    module.exports = TabView;
-}
+module.exports = TabView;

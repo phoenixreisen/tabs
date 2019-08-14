@@ -2,6 +2,8 @@
 
 Phoenix "Web Tabs"-Komponente auf Mithril-Basis.
 
+[Live Demo](https://jsfiddle.net/Fama/w40m6s7d/)
+
 ## Installation
 
 ```bash
@@ -14,14 +16,12 @@ npm install --save-dev @phoenixreisen/tabs
 
 ```scss
 /* via SCSS */
-
 @import "@phoenixreisen/phoenix-design-system/src/index.scss";
 @import "@phoenixreisen/tabs/src/phx.tabs.style.scss";
 ```
 
 ```html
 <!-- via HTML -->
-
 <link rel="stylesheet" href="https://unpkg.com/@phoenixreisen/tabs@latest/dist/phx.tabs.style.css" />
 ```
 
@@ -38,7 +38,7 @@ import Tabs from '@phoenixreisen/tabs';
 ```
 
 ```html
-// Browser
+<!-- oder Browser -->
 <script src="https://unpkg.com/@phoenixreisen/tabs@latest/dist/phx.tabs.view.js" />
 ```
 
@@ -68,6 +68,9 @@ npm run test
 ```
 
 ## Deployment
+
+Nicht vergessen, falls nötig, die Live Demo zu aktualisieren 
+und deren Link vor dem Deployment hier anzupassen.
 
 ```bash
 # Version erhöhen x.x.x => major.minor.patch

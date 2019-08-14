@@ -46,6 +46,11 @@ npm run test
 npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
 npm publish                         # upload to npm
 
+# Git
+git commit package.json package-lock.json -m "(npm) version increased"
+git push
+
+# HG
 hg commit package.json package-lock.json -m "(npm) version increased"
 hg push
 ```

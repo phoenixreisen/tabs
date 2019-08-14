@@ -1,0 +1,33 @@
+.phx-tabs .phx-tabs__tabs-bar {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border-bottom: 2px solid #EEEEF4;
+}
+.phx-tabs .phx-tab {
+  display: inline-block;
+  padding: 1em 1.5em;
+  margin: 0 0.2em;
+  vertical-align: bottom;
+  border: 1px solid #EEEEF4;
+  border-bottom: 0;
+}
+.phx-tabs .phx-tab:first-child {
+  margin-left: 1px;
+}
+.phx-tabs .phx-tab:last-child {
+  margin-right: 0;
+}
+.phx-tabs .phx-tab.is-active-tab {
+  background-color: #EEEEF4;
+}
+.phx-tabs .phx-tab-content {
+  margin: 0;
+}
+.phx-tabs .phx-tab-content.is-hidden-tab {
+  display: none;
+}
+.phx-tabs .phx-tab--link {
+  cursor: pointer;
+}

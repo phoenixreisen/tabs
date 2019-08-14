@@ -5,7 +5,9 @@
   "homepage": "https://www.phoenixreisen.com",
   "main": "src/phx.tabs.view.js",
   "scripts": {
-    "prepublish": "babel src --out-dir dist",
+    "compile:js": "babel src --out-dir dist",
+    "compile:scss": "npx sass --no-source-map ./src:./dist",
+    "prepublish": "npm run compile:js && npm run compile:scss",
     "pretest": "babel src --out-dir test",
     "test": "ospec --require ./test-setup.js",
     "posttest": "del-cli test"

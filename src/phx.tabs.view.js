@@ -1,12 +1,12 @@
-const TabView = {
+const Tabs = {
 
     oninit: (vnode) => {
         vnode.state.activeTab = vnode.attrs.initTab || 0;
-        TabView.checkParameters(vnode);
+        Tabs.checkParameters(vnode);
     },
 
     onupdate: (vnode) => {
-        TabView.checkParameters(vnode);
+        Tabs.checkParameters(vnode);
     },
 
     checkParameters: (vnode) => {
@@ -22,7 +22,7 @@ const TabView = {
 
     view: (vnode) => {  
         const { state, attrs } = vnode;
-        const changeTab = attrs.changeTab || TabView.changeTab;
+        const changeTab = attrs.changeTab || Tabs.changeTab;
         const activeTab = !isNaN(attrs.activeTab) && (attrs.activeTab < attrs.tabs.length)
                         ? attrs.activeTab 
                         : state.activeTab;
@@ -55,5 +55,5 @@ const TabView = {
 };
 
 if(typeof module !== 'undefined') {
-    module.exports = TabView;
+    module.exports = Tabs;
 }

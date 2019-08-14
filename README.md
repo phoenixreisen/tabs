@@ -2,14 +2,50 @@
 
 Phoenix "Web Tabs"-Komponente auf Mithril-Basis.
 
+## Installation
+
+```bash
+npm install --save-dev @phoenixreisen/tabs
+```
+
+## Anwendung
+
+### Styles
+
+```scss
+/* via SCSS */
+
+@import "@phoenixreisen/phoenix-design-system/src/index.scss";
+@import "@phoenixreisen/tabs/src/phx.tabs.style.scss";
+```
+
+```html
+<!-- via HTML -->
+
+<link rel="stylesheet" href="https://unpkg.com/@phoenixreisen/tabs@latest/dist/phx.tabs.style.css" />
+```
+
+### Javascript
+
+#### Einbindung
+
 ```js
-// CommonJS
+// entweder CommonJS
 const Tabs = require('@phoenixreisen/tabs');
 
-// ES6
+// oder ES6
 import Tabs from '@phoenixreisen/tabs';
+```
 
-// Hyperscript
+```html
+// Browser
+<script src="https://unpkg.com/@phoenixreisen/tabs@latest/dist/phx.tabs.view.js" />
+```
+
+#### Aufruf
+
+```js
+// Hyperscript bzw. Javascript
 m(Tabs, 
     { tabs: ['Tab 1', 'Tab 2'] }, 
     [ m('div.tab1'), m('div.tab2') ]
@@ -24,33 +60,27 @@ m(Tabs,
 </Tabs>
 ```
 
-## Installation
-
-```bash
-npm install --save-dev @phoenixreisen/tabs
-```
-
 ## Test
 
 ```bash
 npm install
-
 npm run test
 ```
 
 ## Deployment
 
 ```bash
-npm run test
+# Version erhöhen x.x.x => major.minor.patch
+npm version [major|minor|patch]
 
-npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
-npm publish                         # upload to npm
+# Upload nach NPM
+npm publish
 
-# Git
+# Git - neue Version einchecken
 git commit package.json package-lock.json -m "(npm) version increased"
 git push
 
-# HG
+# HG - neue Version einchecken
 hg commit package.json package-lock.json -m "(npm) version increased"
 hg push
 ```

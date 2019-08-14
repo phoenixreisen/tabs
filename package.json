@@ -3,7 +3,7 @@
   "version": "1.1.6",
   "description": "Tab-Komponente, um Content durch Tabs zu strukturieren.",
   "homepage": "https://www.phoenixreisen.com",
-  "main": "src/phx.tabs.view.js",
+  "main": "dist/phx.tabs.view.js",
   "scripts": {
     "compile:js": "babel src --out-dir dist",
     "compile:scss": "npx sass --no-source-map ./src:./dist",

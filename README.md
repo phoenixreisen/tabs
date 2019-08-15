@@ -4,6 +4,8 @@ Phoenix "Web Tabs"-Komponente auf Mithril-Basis.
 
 [Live Demo](https://jsfiddle.net/Fama/w40m6s7d/)
 
+Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
+
 ## Installation
 
 ```bash

@@ -14,6 +14,8 @@ npm install --save-dev @phoenixreisen/tabs
 
 ## Anwendung
 
+[Mithril](https://mithril.js.org/) wird benötigt.
+
 ### Styles
 
 ```scss

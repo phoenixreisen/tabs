@@ -1,5 +1,0 @@
-.hg/
-.git/
-dist/
-test/
-node_modules/

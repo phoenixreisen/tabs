@@ -20,7 +20,7 @@ npm install --save-dev @phoenixreisen/tabs
 
 ```scss
 /* via SCSS */
-@import "@phoenixreisen/phoenix-design-system/src/index.scss";
+@import "@phoenixreisen/design-system/src/index.scss";
 @import "@phoenixreisen/tabs/src/phx.tabs.style.scss";
 ```
 

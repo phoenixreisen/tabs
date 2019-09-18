@@ -77,17 +77,7 @@ Nicht vergessen, falls nötig, die Live Demo zu aktualisieren
 und deren Link vor dem Deployment hier anzupassen.
 
 ```bash
-# Version erhöhen x.x.x => major.minor.patch
-npm version [major|minor|patch]
-
-# Upload nach NPM
-npm publish
-
-# Git - neue Version einchecken
-git commit package.json package-lock.json -m "(npm) version increased"
+npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
+npm publish                         # upload to npm
 git push
-
-# HG - neue Version einchecken
-hg commit package.json package-lock.json -m "(npm) version increased"
-hg push
 ```

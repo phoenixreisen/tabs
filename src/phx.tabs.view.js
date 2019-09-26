@@ -32,11 +32,11 @@ const Tabs = {
                 <div class="phx-tabs__tabs-bar">
                     { attrs.tabs.map((tabname, tabnr) => {
                         return (
-                            <span 
+                            <a 
                                 class={`phx-tab phx-tab-${tabnr} ${attrs.tabs.length > 1 ? 'phx-tab--link':''} ${tabnr === activeTab ? 'is-active-tab' : 'is-inactive-tab'}`} 
                                 onclick={() => changeTab(vnode, tabnr)}>
                                 { tabname }
-                            </span>
+                            </a>
                         );
                     })}
                 </div>

@@ -28,22 +28,22 @@ const Tabs = {
                         : state.activeTab;
         
         return (
-            <article class="phx-tabs">
-                <div class="phx-tabs__tabs-bar">
+            <article class="tabs">
+                <div class="tabs__tabs-bar">
                     { attrs.tabs.map((tabname, tabnr) => {
                         return (
                             <a 
-                                class={`phx-tab phx-tab-${tabnr} ${attrs.tabs.length > 1 ? 'phx-tab--link':''} ${tabnr === activeTab ? 'is-active-tab' : 'is-inactive-tab'}`} 
+                                class={`tab tab-${tabnr} ${attrs.tabs.length > 1 ? 'tab--link':''} ${tabnr === activeTab ? 'is-active-tab' : 'is-inactive-tab'}`} 
                                 onclick={() => changeTab(vnode, tabnr)}>
                                 { tabname }
                             </a>
                         );
                     })}
                 </div>
-                <div class="phx-tabs__tabs-content">
+                <div class="tabs__tabs-content">
                     { vnode.children.map((content, tabnr) => {
                         return (
-                            <div class={`phx-tab-content phx-tab-content-${tabnr} ${tabnr === activeTab ? 'is-visible-tab' : 'is-hidden-tab'}`}>
+                            <div class={`tab-content tab-content-${tabnr} ${tabnr === activeTab ? 'is-visible-tab' : 'is-hidden-tab'}`}>
                                 { content }
                             </div>
                         );

@@ -2,11 +2,11 @@
 
 Phoenix "Web Tabs"-Komponente auf Mithril-Basis.
 
-[Live Demo](https://jsfiddle.net/Fama/w40m6s7d/1/)
-
 Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
 
 ## Installation
+
+[Mithril](https://mithril.js.org/) wird benötigt.
 
 ```bash
 npm install --save-dev @phoenixreisen/tabs
@@ -14,36 +14,12 @@ npm install --save-dev @phoenixreisen/tabs
 
 ## Anwendung
 
-[Mithril](https://mithril.js.org/) wird benötigt.
-
-### Styles
-
-```scss
-/* via SCSS */
-@import "@phoenixreisen/design-system/src/index.scss";
-@import "@phoenixreisen/tabs/src/phx.tabs.style.scss";
-```
-
-```html
-<!-- via HTML -->
-<link rel="stylesheet" href="https://unpkg.com/@phoenixreisen/tabs@latest/dist/phx.tabs.style.css" />
-```
-
-### Javascript
-
-#### Einbindung
-
 ```js
 // entweder CommonJS
 const Tabs = require('@phoenixreisen/tabs');
 
-// oder ES6
+// oder ES6+
 import Tabs from '@phoenixreisen/tabs';
-```
-
-```html
-<!-- oder Browser -->
-<script src="https://unpkg.com/@phoenixreisen/tabs@latest/dist/phx.tabs.view.js" />
 ```
 
 #### Aufruf
@@ -72,9 +48,6 @@ npm run test
 ```
 
 ## Deployment
-
-Nicht vergessen, falls nötig, die Live Demo zu aktualisieren 
-und deren Link vor dem Deployment hier anzupassen.
 
 ```bash
 npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch

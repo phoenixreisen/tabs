@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/tabs",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Tab-Komponente, um Content durch Tabs zu strukturieren.",
   "homepage": "https://www.phoenixreisen.com",
   "main": "dist/tabs.view.js",

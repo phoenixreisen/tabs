@@ -1,6 +1,7 @@
 .babelrc
 .hgignore
 .gitignore
+test-setup.js
 package-lock.json
 
 .hg/

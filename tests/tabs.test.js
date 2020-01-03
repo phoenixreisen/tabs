@@ -3,31 +3,31 @@ const mq = require("mithril-query");
 const test = require("ospec");
 
 test.spec('Initialisierungscheck', () => {
-    const TabView = require('../test/tabs.view.js');
+    const TabView = require('../dist/tabs.m.js').default;
 
     test('2 Tabs mit nur 1 Komponente', () => {
         let hadInitError = false;
-        try { mq(m(TabView, { tabs: ['Tab 1', 'Tab 2'] }, [ m('div.tab1') ])); } 
+        try { mq(m(TabView, { tabs: ['Tab 1', 'Tab 2'] }, [ m('div.tab1') ])); }
         catch(e) { hadInitError = true; }
         test(hadInitError).equals(true);
     });
     test('1 Tab mit 2 Komponenten', () => {
         let hadInitError = false;
-        try { mq(m(TabView, { tabs: ['Ta b 1'] }, [ m('div.tab1'), m('div.tab2') ])); } 
+        try { mq(m(TabView, { tabs: ['Ta b 1'] }, [ m('div.tab1'), m('div.tab2') ])); }
         catch(e) { hadInitError = true; }
         test(hadInitError).equals(true);
     });
     test('2 Tabs mit 2 Komponenten', () => {
         let hadInitError = false;
-        try { mq(m(TabView, { tabs: ['Tab 1', 'Tab 2'] }, [ m('div.tab1'), m('div.tab2') ])); } 
+        try { mq(m(TabView, { tabs: ['Tab 1', 'Tab 2'] }, [ m('div.tab1'), m('div.tab2') ])); }
         catch(e) { hadInitError = true; }
-        test(hadInitError).equals(false); 
+        test(hadInitError).equals(false);
     });
 });
 
 test.spec('Verhaltenscheck', () => {
-    const TabView = require('../test/tabs.view.js');
-    
+    const TabView = require('../dist/tabs.m.js').default;
+
     test('Klickverhalten', () => {
         const Tabs = mq(m(TabView, { tabs: ['Tab 1', 'Tab 2'] }, [ m('div.tab1'), m('div.tab2') ]));
         // Tabs checken

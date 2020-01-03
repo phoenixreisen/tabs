@@ -1,4 +1,4 @@
-const Tabs = {
+export const Tabs = {
 
     oninit: (vnode) => {
         vnode.state.activeTab = vnode.attrs.initTab || 0;
@@ -20,20 +20,20 @@ const Tabs = {
         vnode.state.activeTab = tabnr;
     },
 
-    view: (vnode) => {  
+    view: (vnode) => {
         const { state, attrs } = vnode;
         const changeTab = attrs.changeTab || Tabs.changeTab;
         const activeTab = !isNaN(attrs.activeTab) && (attrs.activeTab < attrs.tabs.length)
-                        ? attrs.activeTab 
+                        ? attrs.activeTab
                         : state.activeTab;
-        
+
         return (
             <article class="tabs">
                 <div class="tabs__tabs-bar">
                     { attrs.tabs.map((tabname, tabnr) => {
                         return (
-                            <a 
-                                class={`tab tab-${tabnr} ${attrs.tabs.length > 1 ? 'tab--link':''} ${tabnr === activeTab ? 'is-active-tab' : 'is-inactive-tab'}`} 
+                            <a
+                                class={`tab tab-${tabnr} ${attrs.tabs.length > 1 ? 'tab--link':''} ${tabnr === activeTab ? 'is-active-tab' : 'is-inactive-tab'}`}
                                 onclick={() => changeTab(vnode, tabnr)}>
                                 { tabname }
                             </a>
@@ -54,6 +54,4 @@ const Tabs = {
     },
 };
 
-if(typeof module !== 'undefined') {
-    module.exports = Tabs;
-}
+export default Tabs;

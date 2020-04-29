@@ -5,7 +5,7 @@
   "homepage": "https://design-system.phoenixreisen.net",
   "main": "dist/tabs.m.js",
   "types": "src/tabs.m.d.ts",
-  "module": "src/tabs.m.js",
+  "module": "src/tabs.m.tsx",
   "scripts": {
     "test": "ospec --preload ./test-setup.ts",
     "compile:ts": "npx tsc --declaration && npx tsc --build tsconfig.json",

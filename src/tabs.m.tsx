@@ -1,5 +1,22 @@
-import {Vnode, VnodeDom, ITabsAttrs, ITabsState} from './tabs.types';
 import m from 'mithril';
+
+//--- Types -----
+
+export interface ITabsAttrs {
+    initTab: number,
+    activeTab?: number,
+    tabs: Array<any>,
+    changeTab(vnode: Vnode, tabnr: number): void,
+}
+
+export interface ITabsState {
+    activeTab: number,
+}
+
+export type Vnode = m.Vnode<ITabsAttrs, ITabsState>;
+export type VnodeDom = m.VnodeDOM<ITabsAttrs, ITabsState>;
+
+//--- Funktionen -----
 
 const _checkParameters = (vnode: Vnode) => {
     const attrs = vnode.attrs as ITabsAttrs;

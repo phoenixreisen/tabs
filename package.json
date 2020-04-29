@@ -4,7 +4,7 @@
   "description": "Tab-Komponente, um Content durch Tabs zu strukturieren.",
   "homepage": "https://design-system.phoenixreisen.net",
   "main": "dist/tabs.m.js",
-  "types": "src/tabs.m.d.ts",
+  "types": "dist/tabs.m.d.ts",
   "module": "src/tabs.m.tsx",
   "scripts": {
     "test": "ospec --preload ./test-setup.ts",

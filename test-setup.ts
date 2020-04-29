@@ -6,10 +6,11 @@ const dom = new jsdom.JSDOM('', {
     pretendToBeVisual: true,
 });
 
-global.window = dom.window;
-global.document = dom.window.document;
-global.requestAnimationFrame = dom.window.requestAnimationFrame;
-
+Object.assign(global, {
+    window: dom.window,
+    document: dom.window.document,
+    requestAnimationFrame: dom.window.requestAnimationFrame,
+});
 require('mithril');
 
 test.after(function() {

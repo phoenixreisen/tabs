@@ -2,21 +2,21 @@ import m from 'mithril';
 
 //--- Types -----
 
-export interface ITabsAttrs {
+interface ITabsAttrs {
     initTab: number,
     activeTab?: number,
     tabs: Array<any>,
     changeTab(vnode: Vnode, tabnr: number): void,
 }
 
-export interface ITabsState {
+interface ITabsState {
     activeTab: number,
 }
 
-export type Vnode = m.Vnode<ITabsAttrs, ITabsState>;
-export type VnodeDom = m.VnodeDOM<ITabsAttrs, ITabsState>;
+type Vnode = m.Vnode<ITabsAttrs, ITabsState>;
+type VnodeDom = m.VnodeDOM<ITabsAttrs, ITabsState>;
 
-//--- Funktionen -----
+//--- Functions -----
 
 const _checkParameters = (vnode: Vnode) => {
     const attrs = vnode.attrs as ITabsAttrs;
@@ -44,8 +44,8 @@ export const Tabs: m.Component<ITabsAttrs, ITabsState> = {
     view: (vnode: Vnode) => {
         const {state, attrs} = vnode;
         const children = vnode.children as m.ChildArray;
-        const changeTab = attrs.changeTab || _changeTab;
-        const activeTab = attrs.activeTab && (attrs.activeTab < attrs.tabs.length)
+        const changeTab: Function = attrs.changeTab || _changeTab;
+        const activeTab: number = attrs.activeTab && (attrs.activeTab < attrs.tabs.length)
                         ? attrs.activeTab
                         : state.activeTab;
 

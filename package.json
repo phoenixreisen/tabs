@@ -8,7 +8,7 @@
   "module": "src/tabs.m.tsx",
   "scripts": {
     "test": "ospec --preload ./test-setup.ts",
-    "compile:ts": "npx tsc --declaration && npx tsc --build tsconfig.json",
+    "compile:ts": "npx tsc --build tsconfig.json",
     "compile:scss": "npx sass --no-source-map ./src:./dist",
     "pretest": "del-cli ./dist && npm run compile:ts && npm run compile:scss",
     "prepublish": "npm test"
@@ -28,18 +28,11 @@
   },
   "devDependencies": {
     "@types/mithril": "^2.0.2",
-    "@types/ospec": "^4.0.2",
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-file-loader": "^2.0.0",
-    "babel-plugin-inline-svg": "^1.0.1",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
     "del-cli": "^3.0.0",
     "jsdom": "^16.2.2",
     "mithril-node-render": "^3.0.0",
     "mithril-query": "^3.1.0",
     "ospec": "^4.1.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.2"
   }
 }

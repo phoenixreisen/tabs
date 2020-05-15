@@ -2,24 +2,24 @@ import m from 'mithril';
 
 //--- Types -----
 
-interface ITabsAttrs {
+interface Attrs {
     initTab: number,
     activeTab?: number,
     tabs: Array<any>,
     changeTab(vnode: Vnode, tabnr: number): void,
 }
 
-interface ITabsState {
+interface State {
     activeTab: number,
 }
 
-type Vnode = m.Vnode<ITabsAttrs, ITabsState>;
-type VnodeDom = m.VnodeDOM<ITabsAttrs, ITabsState>;
+type Vnode = m.Vnode<Attrs, State>;
+type VnodeDom = m.VnodeDOM<Attrs, State>;
 
 //--- Functions -----
 
 const _checkParameters = (vnode: Vnode) => {
-    const attrs = vnode.attrs as ITabsAttrs;
+    const attrs = vnode.attrs as Attrs;
     const children = vnode.children as m.ChildArray;
     if (!attrs.tabs || !children || (attrs.tabs.length !== children.length)) {
         throw 'amount of tabs and amount of components have to be equal.';
@@ -30,7 +30,7 @@ const _changeTab = (vnode: Vnode, tabnr: number) => {
     vnode.state.activeTab = tabnr;
 };
 
-export const Tabs: m.Component<ITabsAttrs, ITabsState> = {
+export const Tabs: m.Component<Attrs, State> = {
 
     oninit: (vnode: Vnode) => {
         vnode.state.activeTab = vnode.attrs.initTab || 0;
